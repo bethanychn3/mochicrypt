@@ -42,3 +42,7 @@ def check_capacity():
     if count >= 20:
         return "full"
     return "available"
+
+# write a hash function and store hash in the document
+# if the hashes of the password entered matches the one stored, then the information can be seen
+

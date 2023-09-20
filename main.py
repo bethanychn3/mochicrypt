@@ -1,23 +1,17 @@
 # main program that runs mochicrypt
 import f
-#import o
 
-# def generate_key():
-#     flag = False
-#     while flag is False:
-#         new_key = f.make_key()
-#         file = f.read_file()
-#         if f.verify_key(file, new_key):
-#             flag = True
-#             return new_key
-def store_secret():
+def store_secret() -> None:
+    """Stores the user's inputed data into the file."""
+    
     data = input("Please Enter The information You Would Like to Encrypt: ")
     password = input("Please Enter an Access Code: ")
-    #key = generate_key()
     new_hash = f.make_hash(password)
     f.write_file(new_hash, data)
 
-def find_secret():
+def find_secret() -> None:
+    """Finds the corresponding information to the entered password/code."""
+
     user_pass = input("Please enter your access code: ")
     file_open = f.read_file()
     verification = f.verify_pass(file_open, user_pass)
@@ -27,6 +21,8 @@ def find_secret():
         print(f"Your Secret: {verification}")
 
 def run_processes():
+    """Runs the different options presented to the user."""
+
     print("Here's a List of Available Options: ")
     print("[1] Store Data \n[2] Find Data\n")
     picked = input("Please input the corresponding number of your selected option: ")
@@ -38,6 +34,8 @@ def run_processes():
         find_secret()
 
 def main():
+    """The Main Process."""
+
     print("MOCHICRYPT AN UNOFFICIAL ENCRYPTION AND STORAGE :)")
     print("--------------------------------------------------\n")
     if f.check_capacity() == "full":
@@ -47,6 +45,14 @@ def main():
         run_processes()
         print("Thank you!")
 
-    #print("hello world")
-
 main()
+
+#--------UNUSED-------------
+# def generate_key():
+#     flag = False
+#     while flag is False:
+#         new_key = f.make_key()
+#         file = f.read_file()
+#         if f.verify_key(file, new_key):
+#             flag = True
+#             return new_key

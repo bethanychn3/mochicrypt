@@ -1,5 +1,5 @@
 # mochicrypt
-Welcome! This is a basic project designed to create keys for a user wanting to store their information within this local repository without their information being publicly seen (except for in the file where the information is stored for viewing purposes :D ) 
+Welcome! This is a basic project designed to store keys/access codes & "top secret information" from a user wanting to store their information within this local repository without their password & information being publicly seen (except for in the file where the information is stored for viewing purposes :D ) This project utilizes basic hacker attack prevention by hiding important information without really knowing what the user's information is besides their "secret". Their access code and other related info to achieve the selected piece of information is hidden even to the program storage.
 
 Functionalities
 
